@@ -8,15 +8,37 @@ import CTASection from '../components/shared/CTASection'
 import useScrollReveal from '../hooks/useScrollReveal'
 import { contactInfo, productSelectOptions } from '../data/siteData'
 
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000'
+
 export default function Contact() {
   const ref = useScrollReveal()
-  const [submitted, setSubmitted] = useState(false)
+  const [status, setStatus] = useState({ submitted: false, submitting: false, message: '', error: '' })
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    setSubmitted(true)
-    e.target.reset()
-    setTimeout(() => setSubmitted(false), 5000)
+    setStatus({ submitted: false, submitting: true, message: '', error: '' })
+
+    const formData = new FormData(e.target)
+    const data = Object.fromEntries(formData)
+
+    try {
+      const res = await fetch(`${API_URL}/api/contact`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      })
+      const result = await res.json()
+
+      if (res.ok && result.success) {
+        setStatus({ submitted: true, submitting: false, message: result.message, error: '' })
+        e.target.reset()
+        setTimeout(() => setStatus(s => ({ ...s, submitted: false, message: '' })), 6000)
+      } else {
+        setStatus({ submitted: false, submitting: false, message: '', error: result.message || 'Something went wrong.' })
+      }
+    } catch (err) {
+      setStatus({ submitted: false, submitting: false, message: '', error: 'Failed to send. Please try again later.' })
+    }
   }
 
   const infoCards = [
@@ -83,38 +105,44 @@ export default function Contact() {
           </div>
 
           <div className="contact-page-form">
-            {submitted && (
+            {status.submitted && (
               <div className="form-success-msg show">
                 <i className="fa-solid fa-circle-check"></i>
-                Thank you! Your message has been sent. We'll get back to you within 24 hours.
+                {status.message}
+              </div>
+            )}
+            {status.error && (
+              <div className="form-error-msg show">
+                <i className="fa-solid fa-circle-exclamation"></i>
+                {status.error}
               </div>
             )}
             <form onSubmit={handleSubmit}>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0 20px' }}>
                 <div className="form-group">
-                  <input type="text" className="form-input-styled" placeholder="Your Full Name" required />
+                  <input name="name" type="text" className="form-input-styled" placeholder="Your Full Name" required />
                 </div>
                 <div className="form-group">
-                  <input type="tel" className="form-input-styled" placeholder="Mobile Number" required />
+                  <input name="phone" type="tel" className="form-input-styled" placeholder="Mobile Number" required />
                 </div>
               </div>
               <div className="form-group">
-                <input type="email" className="form-input-styled" placeholder="Email Address" required />
+                <input name="email" type="email" className="form-input-styled" placeholder="Email Address" required />
               </div>
               <div className="form-group">
-                <select className="form-input-styled" required>
+                <select name="product" className="form-input-styled" required>
                   <option value="" disabled selected>Select Subject</option>
                   {productSelectOptions.map((opt, idx) => (
-                    <option key={idx}>{opt}</option>
+                    <option key={idx} value={opt}>{opt}</option>
                   ))}
                 </select>
               </div>
               <div className="form-group">
-                <textarea className="form-input-styled" rows="5" placeholder="Your Message..." required></textarea>
+                <textarea name="message" className="form-input-styled" rows="5" placeholder="Your Message..." required></textarea>
               </div>
-              <button type="submit" className="contact-btn btn-shine" style={{ width: '100%', borderRadius: '8px' }}>
+              <button type="submit" className="contact-btn btn-shine" style={{ width: '100%', borderRadius: '8px' }} disabled={status.submitting}>
                 <FaPaperPlane />
-                Send Message
+                {status.submitting ? 'Sending...' : 'Send Message'}
               </button>
             </form>
           </div>
