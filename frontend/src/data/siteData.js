@@ -64,6 +64,22 @@ export const features = [
 
 export const products = [
   {
+    img: printer6,
+    badge: '6 H RICOH GEN6',
+    title: 'Digital Textile Printer',
+    model: 'MODEL: GFX-RL-RG6B-2.1',
+    specs: [
+      { label: 'Printing Width', value: '1.85m & Up to 2.6 m' },
+      { label: 'Speed', value: '162 m²/h (2 Pass 604×1200 dpi)' },
+      { label: 'Inks Type', value: 'Reactive/Disperse/Pigment' },
+      { label: 'Colors', value: '8 Color' },
+      { label: 'Print Media', value: 'Pure Cotton & Viscose' },
+      { label: 'RIP Software', value: 'NeoStampa' },
+      { label: 'Power', value: '16 kW' },
+      { label: 'Carriage System', value: 'Magnetic Linear Rail' },
+    ],
+  },
+  {
     img: kyocera16h,
     badge: '16H KYOCERA',
     title: 'High Speed Digital Textile Printer',
@@ -92,22 +108,6 @@ export const products = [
       { label: 'Print Media', value: 'Pure Cotton & Viscose' },
       { label: 'RIP Software', value: 'NeoStampa' },
       { label: 'Power', value: '25 kW' },
-      { label: 'Carriage System', value: 'Magnetic Linear Rail' },
-    ],
-  },
-  {
-    img: printer6,
-    badge: '6 H RICOH GEN6',
-    title: 'Digital Textile Printer',
-    model: 'MODEL: GFX-RL-RG6B-2.1',
-    specs: [
-      { label: 'Printing Width', value: '1.85m & Up to 2.6 m' },
-      { label: 'Speed', value: '162 m²/h (2 Pass 604×1200 dpi)' },
-      { label: 'Inks Type', value: 'Reactive/Disperse/Pigment' },
-      { label: 'Colors', value: '8 Color' },
-      { label: 'Print Media', value: 'Pure Cotton & Viscose' },
-      { label: 'RIP Software', value: 'NeoStampa' },
-      { label: 'Power', value: '16 kW' },
       { label: 'Carriage System', value: 'Magnetic Linear Rail' },
     ],
   },
