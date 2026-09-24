@@ -63,117 +63,260 @@ export const features = [
 ]
 
 export const products = [
-  {
-    img: printer6,
-    badge: '6 H RICOH GEN6',
-    title: 'Digital Textile Printer',
-    model: 'MODEL: GFX-RL-RG6B-2.1',
-    specs: [
-      { label: 'Printing Width', value: '1.85m & Up to 2.6 m' },
-      { label: 'Speed', value: '162 m²/h (2 Pass 604×1200 dpi)' },
-      { label: 'Inks Type', value: 'Reactive/Disperse/Pigment' },
-      { label: 'Colors', value: '8 Color' },
-      { label: 'Print Media', value: 'Pure Cotton & Viscose' },
-      { label: 'RIP Software', value: 'NeoStampa' },
-      { label: 'Power', value: '16 kW' },
-      { label: 'Carriage System', value: 'Magnetic Linear Rail' },
-    ],
-  },
-  {
-    img: kyocera16h,
-    badge: '16H KYOCERA',
-    title: 'High Speed Digital Textile Printer',
-    model: 'MODEL: GFX-RE-KY16-2.1',
-    specs: [
-      { label: 'Max Width', value: '1.85m & Up to 2.6 m' },
-      { label: 'Speed', value: '324 m²/h (2 Pass 604×600 dpi)' },
-      { label: 'Inks Type', value: 'Reactive/Disperse/Pigment' },
-      { label: 'Colors', value: '8 Color' },
-      { label: 'Print Media', value: 'Pure Cotton & Viscose' },
-      { label: 'RIP Software', value: 'NeoStampa' },
-      { label: 'Power', value: '40 kW' },
-      { label: 'Carriage System', value: 'Magnetic Linear Rail' },
-    ],
-  },
-  {
-    img: printer5,
-    badge: '16H RICOH GEN6',
-    title: 'High Speed Digital Textile Printer',
-    model: 'MODEL: GFX-RE-RG16-1.1',
-    specs: [
-      { label: 'Printing Width', value: '1.85m & Up to 2.6 m' },
-      { label: 'Speed', value: '220 m²/h (2 Pass 508×600 dpi)' },
-      { label: 'Inks Type', value: 'Reactive/Disperse/Pigment' },
-      { label: 'Colors', value: '8 Color' },
-      { label: 'Print Media', value: 'Pure Cotton & Viscose' },
-      { label: 'RIP Software', value: 'NeoStampa' },
-      { label: 'Power', value: '25 kW' },
-      { label: 'Carriage System', value: 'Magnetic Linear Rail' },
-    ],
-  },
+
   {
     img: printer2,
-    badge: '4H EPSON I3200',
+    badge: '4/8H EPSON i3200',
     title: 'Digital Textile Printer',
     model: 'MODEL: GFX-PG-E4-1.1',
     specs: [
       { label: 'Printing Width', value: '1.85m' },
-      { label: 'Speed', value: '130 m²/h (2 Pass 360×720 dpi)' },
+      { label: 'Speed', value: '65 m²/h (2 Pass 360×720 dpi)' },
       { label: 'Inks Type', value: 'Reactive/Disperse/Pigment' },
       { label: 'Colors', value: '4/8 Color (CMYK+4)' },
-      { label: 'Print Media', value: 'Pure Cotton, Nylon & Viscose' },
+      { label: 'Print Media', value: 'Polyester, Pure Cotton, Nylon & Viscose' },
       { label: 'RIP Software', value: 'NeoStampa (Optional)' },
-      { label: 'Power', value: 'Printer 8kW' },
+      { label: 'Power', value: 'Printer – 17 kW' },
       { label: 'Carriage System', value: 'Belt System' },
     ],
   },
   {
-    img: printe7,
-    badge: '8H EPSON I3200',
-    title: 'High Speed Digital Sublimation Printer',
-    model: 'MODEL: GFX-D-S-E8-1.1',
-    specs: [
-      { label: 'Printing Width', value: '1.90m' },
-      { label: 'Speed', value: '225 m²/h (1 Pass 360×1200 dpi)' },
-      { label: 'Inks Type', value: 'Dye Sublimation / Aqueous based Pigmented Inks' },
-      { label: 'Colors', value: '4 Color (CMYK)' },
-      { label: 'Print Media', value: 'Sublimation Paper' },
-      { label: 'RIP Software', value: 'NeoStampa (Optional)' },
-      { label: 'Power', value: '8 kW' },
-      { label: 'Carriage System', value: 'Belt System' },
-    ],
-  },
+  img: digitalPrinter5,
+  badge: '8H RICOH GEN6',
+  title: 'Digital Textile Printer',
+  model: 'GFX-RE-RG6B-2.1',
+  specs: [
+    {
+      label: 'Printing Width',
+      value: '1.85m & also available for 2.2m/2.6m'
+    },
+    {
+      label: 'Speed',
+      value: '162 m²/h (2 Pass 604×600 dpi)'
+    },
+    {
+      label: 'Inks Type',
+      value: 'Reactive/Disperse/Pigment'
+    },
+    {
+      label: 'Colors',
+      value: '8 Color'
+    },
+    {
+      label: 'Print Media',
+      value: 'Pure Cotton & Viscose'
+    },
+    {
+      label: 'RIP Software',
+      value: 'NeoStampa'
+    },
+    {
+      label: 'Power',
+      value: 'Printer: 220V, 35A, Single/Three Phase, 50Hz / Dryer: AC 220V, 20.5A, 50/60Hz'
+    },
+    {
+      label: 'Carriage System',
+      value: 'Magnetic Linear Rail'
+    }
+  ],
+},
   {
-    img: digitalPrinter3,
-    badge: '4H EPSON I3200',
-    title: 'Digital Sublimation Printer',
-    model: 'MODEL: GFX-DS-E4-1.1',
-    specs: [
-      { label: 'Max Width', value: 'Up to 1.90 m' },
-      { label: 'Speed', value: '95 m²/h (2 Pass 360×1200 dpi)' },
-      { label: 'Inks Type', value: 'Reactive/Disperse/Pigment' },
-      { label: 'Colors', value: '4 Color (CMYK)' },
-      { label: 'Print Media', value: 'Sublimation Paper' },
-      { label: 'RIP Software', value: 'NeoStampa' },
-      { label: 'Power', value: '5 kW' },
-      { label: 'Carriage System', value: 'Belt System' },
-    ],
-  },
+  img: digitalPrinter3,
+  badge: 'EPSON I3200',
+  title: 'Direct To Film Printer',
+  model: 'DTF Printer',
+  specs: [
+    {
+      label: 'Head Type',
+      value: 'Epson i3200 2/4 Head'
+    },
+    {
+      label: 'Ink Type',
+      value: 'DTF Pigment Ink'
+    },
+    {
+      label: 'Colors',
+      value: 'CMYK + White'
+    },
+    {
+      label: 'Speed & Precision',
+      value: '4 Head: 4 Pass-30 Sq.mtr/h, 6 Pass-20 Sq.mtr/h / 2 Head: 4 Pass-15 Sq.mtr/h, 6 Pass-9 Sq.mtr/h'
+    },
+    {
+      label: 'Print Width',
+      value: 'Up to 24"'
+    },
+    {
+      label: 'Software',
+      value: 'RIIN'
+    },
+    {
+      label: 'Power',
+      value: 'DTF Printer 1 kW / Powder Shaker Machine 7.9 kW'
+    },
+    {
+      label: 'Operation System',
+      value: 'Win7/Win8/Win10 (64 bit)'
+    }
+  ],
+},
+
+{
+  img: kyocera16h,
+  badge: '4H EPSON I3200',
+  title: 'Digital Sublimation Printer',
+  model: 'GFX-DS-E4-1.1',
+  specs: [
+    {
+      label: 'Max Width',
+      value: 'Up to 1.90 m'
+    },
+    {
+      label: 'Speed',
+      value: '95 m²/h (2 Pass 360×1200 dpi)'
+    },
+    {
+      label: 'Inks Type',
+      value: 'Dye Sublimation / Aqueous based Pigmented Inks'
+    },
+    {
+      label: 'Colors',
+      value: '4 Color (CMYK)'
+    },
+    {
+      label: 'Print Media',
+      value: 'Sublimation Paper, Decor Paper, Photo Paper, Vinyl Sheet & Sticker'
+    },
+    {
+      label: 'RIP Software',
+      value: 'NeoStampa'
+    },
+    {
+      label: 'Power',
+      value: 'AC 220V, 50/60 Hz'
+    },
+    {
+      label: 'Carriage System',
+      value: 'Belt System'
+    }
+  ],
+},
+
   {
-    img: digitalPrinter6,
-    badge: '2/4 EPSON I3200',
-    title: 'DIRECT TO FILM PRINTER',
-    model: 'MODEL: 2/4 EPSON I3200',
-    specs: [
-      { label: 'Number Of Head', value: '2/4' },
-      { label: 'Inks Type', value: 'DTF Pigment Ink' },
-      { label: 'Colors', value: 'CMYK + White' },
-      { label: 'Speed & precision', value: '30 Sq m²/h (4 Pass)' },
-      { label: 'Print Width', value: 'Up to 24' },
-      { label: 'Software', value: 'RIIN' },
-      { label: 'Power', value: '6 kW' },
-    ],
-  },
+  img: printer5,
+  badge: '8H Epson i3200',
+  title: 'High Speed Digital Sublimation Printer',
+  model: 'GFX-DS-E8-1.1',
+  specs: [
+    {
+      label: 'Maximum Print Width',
+      value: 'Up to 1900mm'
+    },
+    {
+      label: 'Speed',
+      value: '225 m²/h (1 Pass 360×1200 dpi)'
+    },
+    {
+      label: 'Colors',
+      value: '4/8 Color (CMYK+4)'
+    },
+    {
+      label: 'Ink Type',
+      value: 'Dye Sublimation / Aqueous based Pigmented Inks'
+    },
+    {
+      label: 'Media',
+      value: 'Sublimation Paper'
+    },
+    {
+      label: 'RIP Software',
+      value: 'NeoStampa (Optional)'
+    },
+    {
+      label: 'Power',
+      value: 'AC 220V, 60A'
+    },
+    {
+      label: 'Carriage System',
+      value: 'Belt System'
+    }
+  ],
+},
+
+
+  {
+  img: printe7,
+  badge: '16H Ricoh Gen6',
+  title: 'High Speed Digital Textile Printer',
+  model: 'GFX-RE-RG616-1.1',
+  specs: [
+    {
+      label: 'Printing Width',
+      value: '2 meter'
+    },
+    {
+      label: 'Speed',
+      value: '240 m²/h (2 Pass 508×600 dpi)'
+    },
+    {
+      label: 'Colors',
+      value: '4/8 Color'
+    },
+    {
+      label: 'Print Media',
+      value: 'Pure Cotton & Viscose'
+    },
+    {
+      label: 'RIP Software',
+      value: 'NeoStampa'
+    },
+    {
+      label: 'Power',
+      value: 'Printer – 8 kW / Dryer – 30 kW'
+    },
+    {
+      label: 'Carriage System',
+      value: 'Magnetic Linear Rail'
+    }
+  ],
+}, 
+  
+  {
+  img: digitalPrinter6,
+  badge: '16H Kyocera',
+  title: 'High Speed Digital Textile Printer',
+  model: 'GFX-RE-KY16-2.1',
+  specs: [
+    {
+      label: 'Printing Width',
+      value: '1.85m & also available for 2.2m/2.6m'
+    },
+    {
+      label: 'Speed',
+      value: '324 m²/h (2 Pass 604×600 dpi)'
+    },
+    {
+      label: 'Colors',
+      value: '8 Color'
+    },
+    {
+      label: 'Print Media',
+      value: 'Pure Cotton & Viscose'
+    },
+    {
+      label: 'RIP Software',
+      value: 'NeoStampa'
+    },
+    {
+      label: 'Power',
+      value: 'Printer – 220V, 104A Single/Three phase'
+    },
+    {
+      label: 'Carriage System',
+      value: 'Magnetic Linear Rail'
+    }
+  ],
+},
 ]
 
 export const premiumProducts = [
